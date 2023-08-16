@@ -111,6 +111,7 @@ const Header = () => {
                      transition-all duration-100
                      ease-in-out text-textColor 
                      text-base"
+                     onClick={()=> setIsMenu(false)}
                      >
                        New Item 
                         <MdAdd/>
@@ -141,7 +142,7 @@ const Header = () => {
     <div className="flex items-center justify-between md:hidden w-full h-full">
    
         <div className="relative flex items-center justify-center">
-            <MdShoppingBasket className="text-textColor text-xl ml-8 cursor-pointer" />
+            <MdShoppingBasket className="text-textColor text-xl ml-8 cursor-pointer"/>
             <div className=" absolute -top-2 -right-1 w-3 h-3 rounded-full
                   bg-cartNumBg flex items-center justify-center"
                    >
@@ -181,7 +182,9 @@ const Header = () => {
                   gap-3 cursor-pointer hover:bg-slate-100
                   transition-all duration-100
                   ease-in-out text-textColor 
-                  text-base">
+                  text-base" 
+                  onClick={()=> setIsMenu(false)}
+                  >
                   New Item <MdAdd/>
                   </p>
                 </Link>
@@ -191,22 +194,30 @@ const Header = () => {
     <ul className="flex  flex-col">
         <li className="text-base text-textColor hover:text-headingColor
              duration-100 transition-all ease-in-out cursor-pointer
-             hover:bg-slate-100 px-4 py-4">
+             hover:bg-slate-100 px-4 py-4"
+               onClick={()=> setIsMenu(false)}
+               >
               Home
         </li>
         <li className="text-base text-textColor hover:text-headingColor 
              duration-100 transition-all ease-in-out cursor-pointer
-              hover:bg-slate-100 px-4 py-4">
+              hover:bg-slate-100 px-4 py-4" 
+                onClick={()=> setIsMenu(false)}
+                >
                 Menu
         </li>
         <li className="text-base text-textColor hover:text-headingColor
              duration-100 transition-all ease-in-out cursor-pointer
-              hover:bg-slate-100 px-4 py-4">
+              hover:bg-slate-100 px-4 py-4" 
+              onClick={()=> setIsMenu(false)}
+              >
                  About Us
         </li>
         <li className="text-base text-textColor hover:text-headingColor
               duration-100 transition-all ease-in-out cursor-pointer
-               hover:bg-slate-100 px-4 py-4">
+               hover:bg-slate-100 px-4 py-4"
+               onClick={()=> setIsMenu(false)}
+               >
                   Service
         </li>
     </ul>
