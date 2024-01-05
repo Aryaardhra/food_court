@@ -1,11 +1,14 @@
 import React, { useEffect } from 'react'
-import { CreateContainer, Header, MainContainer, } from './components';
+import { CreateContainer, Header, MainContainer, RowContainer, } from './components';
 import { Route, Routes } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import { useStateValue } from './context/StateProvider';
 import { getAllFoodItems } from './utils/firebaseFunction';
 import { data } from 'autoprefixer';
 import { actionType } from './context/reducer';
+import About from './components/about/About';
+import Menu from './components/menu/Menu';
+import { Service } from './components/service/Service';
 
 const App = () => {
 
@@ -35,6 +38,9 @@ const App = () => {
          <Routes>
           <Route exact path="/" Component={MainContainer}/>
           <Route path='/createItem' Component ={CreateContainer}/>
+          <Route path="/about" element={<About />} />
+          <Route path="/menu" element={<Menu />} />
+          <Route path="/service" element={<Service />} />
          </Routes>
 
       </main>

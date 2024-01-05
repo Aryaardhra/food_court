@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { MdShoppingBasket, MdAdd, MdLogout} from "react-icons/md";
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { getAuth, getRedirectResult, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { app } from "../../firebase.config";
 import { useStateValue } from '../../context/StateProvider';
@@ -68,19 +68,27 @@ const Header = () => {
 
             <li className="text-base text-textColor hover:text-headingColor 
                  duration-100 transition-all ease-in-out cursor-pointer">
+                  <NavLink to="/" className="log" style={{textDecoration: "none"}}>
                   Home
+                  </NavLink>
             </li>
             <li className="text-base text-textColor hover:text-headingColor 
                  duration-100 transition-all ease-in-out cursor-pointer">
+                  <NavLink to="/menu" className="log" style={{textDecoration: "none"}}>
                   Menu
+                  </NavLink>
             </li>
             <li className="text-base text-textColor hover:text-headingColor
                  duration-100 transition-all ease-in-out cursor-pointer">
+                  <NavLink to="/about" className="log" style={{textDecoration: "none"}}>
                    About Us
+                  </NavLink>
             </li>
             <li className="text-base text-textColor hover:text-headingColor 
                  duration-100 transition-all ease-in-out cursor-pointer">
+                  <NavLink to="/service" className="log" style={{textDecoration: "none"}}>
                    Service
+                  </NavLink>
             </li>
             
         </motion.ul>
